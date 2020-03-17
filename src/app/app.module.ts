@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
@@ -10,6 +11,7 @@ import { AutoCompleteModule } from "primeng/autocomplete";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NoopAnimationsModule,

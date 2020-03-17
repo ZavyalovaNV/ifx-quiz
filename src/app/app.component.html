@@ -1,11 +1,16 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (submit)="onSubmit()">
   <p>
     <label>Pick or type Style</label>
     <!-- PrimeNG Autocomplete https://www.primefaces.org/primeng/showcase/#/autocomplete -->
     <p-autoComplete
+      [(ngModel)]="selectedOption" [ngModelOptions]="{standalone: true}"
       field="Name"
       [suggestions]="options"
       (completeMethod)="complete($event)"
+      (onSelect)='setValue()'
+      (change)="setValue()"
     ></p-autoComplete>
   </p>
+
+  <button type="submit">Отправить</button>
 </form>
